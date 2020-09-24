@@ -1,6 +1,6 @@
 package com.step.model.alte;
 
-public class sticla {
+public class Sticla {
     float volum;
     boolean deschisa;
 }

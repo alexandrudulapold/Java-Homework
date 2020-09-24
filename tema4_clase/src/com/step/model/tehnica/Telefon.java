@@ -1,6 +1,6 @@
 package com.step.model.tehnica;
 
-public class telefon {
+public class Telefon {
     String brand;
     String culoare;
     boolean ecranStricat;

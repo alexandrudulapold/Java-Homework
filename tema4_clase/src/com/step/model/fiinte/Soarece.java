@@ -1,9 +1,9 @@
 package com.step.model.fiinte;
 
-public class porumbel {
+public class Soarece {
     boolean gen;
 
-    public void zboara() {
+    public void merge() {
     }
     public void maninca() {
     }

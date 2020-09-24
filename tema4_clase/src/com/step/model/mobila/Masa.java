@@ -1,6 +1,6 @@
-package com.step.model.obiecte;
+package com.step.model.mobila;
 
-public class masa {
+public class Masa {
     int sertare;
     String culoare;
     float inaltime;

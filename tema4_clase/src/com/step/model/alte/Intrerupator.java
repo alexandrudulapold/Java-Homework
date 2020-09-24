@@ -1,6 +1,6 @@
 package com.step.model.alte;
 
-public class intrerupator {
+public class Intrerupator {
     String culoare;
     boolean aprins;
 

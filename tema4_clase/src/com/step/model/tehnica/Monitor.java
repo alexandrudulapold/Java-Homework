@@ -1,6 +1,6 @@
 package com.step.model.tehnica;
 
-public class monitor {
+public class Monitor {
     String culoare;
     String firma;
     float diagonala;

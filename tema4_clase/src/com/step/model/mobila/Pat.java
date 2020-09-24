@@ -1,6 +1,6 @@
-package com.step.model.obiecte;
+package com.step.model.mobila;
 
-public class pat {
+public class Pat {
     float lungime;
     float latime;
     byte perne;

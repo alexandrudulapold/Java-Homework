@@ -1,4 +1,4 @@
-package com.step.model.alte;
+package com.step.model.obiecte;
 
 public class floare {
     String specie;

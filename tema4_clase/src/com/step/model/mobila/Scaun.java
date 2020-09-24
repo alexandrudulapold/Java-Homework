@@ -1,6 +1,6 @@
-package com.step.model.obiecte;
+package com.step.model.mobila;
 
-public class scaun {
+public class Scaun {
     boolean spinare;
     boolean moale;
     byte picioare;

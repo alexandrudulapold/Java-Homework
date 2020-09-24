@@ -1,6 +1,6 @@
 package com.step.model.tehnica;
 
-public class calculator {
+public class Calculator {
     int RAM;
     String procesor;
     String placaVideo;

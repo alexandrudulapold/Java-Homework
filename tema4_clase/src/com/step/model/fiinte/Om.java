@@ -1,6 +1,6 @@
 package com.step.model.fiinte;
 
-public class om {
+public class Om {
     boolean gen;
     float inaltime;
     String culoareOchi;

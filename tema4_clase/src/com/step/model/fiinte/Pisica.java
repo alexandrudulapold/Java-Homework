@@ -1,6 +1,6 @@
 package com.step.model.fiinte;
 
-public class pisica {
+public class Pisica {
     String culoareBlana;
     int varsta;
 

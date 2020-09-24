@@ -1,6 +1,6 @@
 package com.step.model.fiinte;
 
-public class caine {
+public class Caine {
     String rasa;
     boolean gen;
     String culoareBlana;

@@ -1,6 +1,6 @@
-package com.step.model.obiecte;
+package com.step.model.mobila;
 
-public class dulap {
+public class Dulap {
     float inaltime;
     float latime;
     String culoare;
