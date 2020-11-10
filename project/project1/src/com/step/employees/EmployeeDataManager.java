@@ -1,15 +1,13 @@
 package com.step.employees;
 
-import com.step.menu.Display;
+import com.step.menu.DisplayMenu;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmployeeDataManager {
 
     public static void readEmployee(Employee employee) {
-
 
         System.out.println(employee.id + "   " + employee.nume + " " + employee.prenume
                 + "   " + employee.dataNasterii + "   " + employee.idnp + "   " + employee.salariu);
@@ -46,7 +44,7 @@ public class EmployeeDataManager {
             for(int i = 0; i < Employee.getNrEmployees(); i++)
             {
                 if(employee.get(i).id == idToUpdate) {
-                    Display.updateMenu(employee.get(i));
+                    DisplayMenu.updateMenu(employee.get(i));
                     int choice = sc.nextInt();
 
                     switch (choice) {

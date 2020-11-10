@@ -4,7 +4,7 @@ import com.step.employees.Employee;
 
 import java.util.Scanner;
 
-public class Display {
+public class DisplayMenu {
 
 
     private static void spaceAbove() {
@@ -25,7 +25,6 @@ public class Display {
 
     public static void updateMenu(Employee employee) {
         spaceAbove();
-        Scanner sc = new Scanner(System.in);
 
         System.out.println("1. Nume - " + employee.getNume());
         System.out.println("2. Prenume - " + employee.getPrenume());

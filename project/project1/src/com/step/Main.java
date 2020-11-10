@@ -2,7 +2,7 @@ package com.step;
 
 import com.step.employees.Employee;
 import com.step.employees.EmployeeDataManager;
-import com.step.menu.Display;
+import com.step.menu.DisplayMenu;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -21,7 +21,7 @@ public class Main {
 
 
         while (true) {
-            Display.mainMenu();
+            DisplayMenu.mainMenu();
 
             int choice = sc.next().charAt(0);
 
