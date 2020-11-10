@@ -2,6 +2,7 @@ package com.step.employees;
 
 import com.step.menu.Display;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -57,28 +58,28 @@ public class EmployeeDataManager {
                             break;
 
                         case 2:
-                            System.out.println("\nNume curent: " + employee.get(i).getPrenume());
+                            System.out.println("\nPrenume curent: " + employee.get(i).getPrenume());
                             System.out.println("Introduceti prenume nou: ");
                             sc.nextLine();
                             employee.get(i).prenume = sc.nextLine();
                             break;
 
                         case 3:
-                            System.out.println("\nNume curent: " + employee.get(i).getDataNasterii());
+                            System.out.println("\nData nasterii curenta: " + employee.get(i).getDataNasterii());
                             System.out.println("Introduceti data nastere noua: ");
                             sc.nextLine();
                             employee.get(i).dataNasterii = sc.nextLine();
                             break;
 
                         case 4:
-                            System.out.println("\nNume curent: " + employee.get(i).getIdnp());
+                            System.out.println("\nIDNP curent: " + employee.get(i).getIdnp());
                             System.out.println("Introduceti idnp nou: ");
                             sc.nextLine();
                             employee.get(i).idnp = sc.nextLine();
                             break;
 
                         case 5:
-                            System.out.println("\nNume curent: " + employee.get(i).getSalariu());
+                            System.out.println("\nSalariu curent: " + employee.get(i).getSalariu());
                             System.out.println("Introduceti salariu nou: ");
                             sc.nextLine();
                             employee.get(i).salariu = sc.nextInt();
