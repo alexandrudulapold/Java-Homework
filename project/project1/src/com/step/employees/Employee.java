@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Employee {
 
-    protected static int nrEmployees = 0;
     private static int maxId = 0;
 
     protected int id;
@@ -17,7 +16,7 @@ public class Employee {
 
 
     // CONSTRUCTORI
-    public Employee() {
+    /*public Employee() {
         System.out.println("ANGAJAT NOU\n");
 
         Scanner sc = new Scanner(System.in);
@@ -35,9 +34,9 @@ public class Employee {
 
         this.id = ++maxId;
         nrEmployees++;
-    }
+    }*/
 
-    public Employee(String nume, String prenume, String dataNasterii, String idnp, int salariu) {
+    protected Employee(String nume, String prenume, String dataNasterii, String idnp, int salariu) {
         this.nume = nume;
         this.prenume = prenume;
         this.dataNasterii = dataNasterii;
@@ -45,14 +44,12 @@ public class Employee {
         this.salariu = salariu;
 
         this.id = ++maxId;
-        nrEmployees++;
+
     }
     // SFARSIT CONSTRUCTORI
 
 
-    public static int getNrEmployees() {
-        return nrEmployees;
-    }
+
     public static int getMaxId() {
         return maxId;
     }
