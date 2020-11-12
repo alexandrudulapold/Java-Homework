@@ -7,13 +7,14 @@ import java.util.Scanner;
 
 public class EmployeeDataManager {
 
-    protected static int nrEmployees = 0;
-
     static ArrayList<Employee> employees = new ArrayList<Employee>();
+    private static int nrEmployees = 0;
+    private static int maxId = 0;
 
     public static void addEmployee(String nume, String prenume, String dataNasterii, String idnp, int salariu) {
         employees.add(new Employee(nume, prenume, dataNasterii, idnp, salariu));
 
+        maxId++;
         nrEmployees++;
     }
 
@@ -31,7 +32,7 @@ public class EmployeeDataManager {
     }
 
     public static void deleteEmployee(ArrayList<Employee> employees, int idToDelete) {
-        if(idToDelete <= Employee.getMaxId()) {
+        if(idToDelete <= maxId) {
             for(int i = 0; i < getNrEmployees(); i++)
             {
                 if(employees.get(i).id == idToDelete) {
@@ -49,7 +50,7 @@ public class EmployeeDataManager {
 
     public static void updateEmployee(ArrayList<Employee> employees, int idToUpdate) {
         Scanner sc = new Scanner(System.in);
-        if(idToUpdate <= Employee.getMaxId()) {
+        if(idToUpdate <= maxId) {
             for(int i = 0; i < getNrEmployees(); i++)
             {
                 if(employees.get(i).id == idToUpdate) {
@@ -107,6 +108,10 @@ public class EmployeeDataManager {
     public static int getNrEmployees() {
         return nrEmployees;
     }
+    public static int getMaxId() {
+        return maxId;
+    }
+
     public static ArrayList<Employee> getEmployees() {
         return employees;
     }

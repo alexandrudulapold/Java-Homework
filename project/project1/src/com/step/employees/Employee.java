@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Employee {
 
-    private static int maxId = 0;
+
 
     protected int id;
     protected String nume;
@@ -43,16 +43,14 @@ public class Employee {
         this.idnp = idnp;
         this.salariu = salariu;
 
-        this.id = ++maxId;
+        this.id = EmployeeDataManager.getMaxId() + 1;
 
     }
     // SFARSIT CONSTRUCTORI
 
 
 
-    public static int getMaxId() {
-        return maxId;
-    }
+
 
     public String getNume() {return nume;}
     public String getPrenume() {return prenume;}
