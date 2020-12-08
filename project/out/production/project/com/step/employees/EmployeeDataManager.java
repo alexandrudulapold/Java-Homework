@@ -2,7 +2,10 @@ package com.step.employees;
 
 import com.step.menu.DisplayMenu;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -18,10 +21,6 @@ public class EmployeeDataManager {
 
         maxId++;
         nrEmployees++;
-    }
-
-    public void readSerializedEmployee(Employee employee) {
-        employees.add(new Employee(employee.nume, employee.prenume, employee.dataNasterii, employee.idnp, employee.salariu, this));
     }
 
     public void readEmployee(Employee employee) {
@@ -120,26 +119,17 @@ public class EmployeeDataManager {
         try {
             FileOutputStream fileOut = new FileOutputStream("D:\\programare\\java\\homework\\project\\fisiere\\employee.dat");
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            DataOutputStream dataOut = new DataOutputStream(fileOut);
-
-            dataOut.writeInt(nrEmployees);
-            dataOut.writeInt(maxId);
 
             for(Employee employee : this.employees) {
+                
                 objectOut.writeObject(employee);
             }
 
-            fileOut.flush();
-            fileOut.close();
-            objectOut.flush();
-            objectOut.close();
-            dataOut.flush();
-            dataOut.close();
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException eIO) {
-            System.out.println("Output exception");
+            System.out.println(eIO.getMessage());
         }
     }
 
@@ -148,13 +138,6 @@ public class EmployeeDataManager {
     }
     public int getMaxId() {
         return this.maxId;
-    }
-
-    public void setNrEmployees(int value) {
-        this.nrEmployees = value;
-    }
-    public void setMaxId(int value) {
-        this.maxId = value;
     }
 
     public ArrayList<Employee> getEmployees() {

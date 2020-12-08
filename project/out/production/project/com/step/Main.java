@@ -10,48 +10,28 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main implements Serializable {
+public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         EmployeeDataManager empDataManager = new EmployeeDataManager();
 
         // Default employees
-        /*empDataManager.addEmployee("Belibov", "Eugen", LocalDate.parse("1999-10-23"), "7891438914514", 12000);
+         /*empDataManager.addEmployee("Belibov", "Eugen", LocalDate.parse("1999-10-23"), "7891438914514", 12000);
         empDataManager.addEmployee("Belibov", "Andrei", LocalDate.parse("2001-03-15"), "4062926209264", 11000);
         empDataManager.addEmployee("Cojocaru", "Ion", LocalDate.parse("1988-02-19"), "1749266020153", 26000);*/
 
         try {
             FileInputStream fileIn = new FileInputStream("D:\\programare\\java\\homework\\project\\fisiere\\employee.dat");
             ObjectInputStream objIn = new ObjectInputStream(fileIn);
-            DataInputStream dataIn = new DataInputStream(fileIn);
 
-            int nrEmp = dataIn.readInt();
-            int maxId = dataIn.readInt();
-
-            for(int i = 0; i < nrEmp; i++) {
-                Object obj = objIn.readObject();
-                if(obj == null) {
-                    break;
-                }
-                empDataManager.readSerializedEmployee((Employee)obj);
-            }
-
-            empDataManager.setNrEmployees(nrEmp);
-            empDataManager.setMaxId(maxId);
-
-            fileIn.close();
-            objIn.close();
-            dataIn.close();
+            
         }
         catch (FileNotFoundException e) {
-            System.out.println("No employee.dat found. Skipping importing the data");
-        } catch (ClassNotFoundException eC) {
-            System.out.println("Class not found");
+            e.printStackTrace();
         } catch (IOException eIO) {
-            System.out.println("Input exception");
+            eIO.printStackTrace();
         }
-
 
         while (true) {
             DisplayMenu.mainMenu();

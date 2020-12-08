@@ -1,12 +1,11 @@
 package com.step.employees;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Employee implements Serializable {
+public class Employee {
 
-    public static final long serialVersionUID = 1L;
+
 
     protected int id;
     protected String nume;

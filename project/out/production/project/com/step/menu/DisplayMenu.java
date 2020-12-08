@@ -20,7 +20,7 @@ public class DisplayMenu {
         System.out.println("2. Afiseaza angajati");
         System.out.println("3. Actualizeaza angajati");
         System.out.println("4. Sterge angajati");
-        System.out.println("\nOricare alt buton - salveaza si iesi");
+        System.out.println("\nOricare alt buton - iesi");
     }
 
     public static void updateMenu(Employee employee) {
