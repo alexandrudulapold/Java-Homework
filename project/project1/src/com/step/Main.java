@@ -27,7 +27,6 @@ public class Main implements Serializable {
             DataInputStream dataIn = new DataInputStream(fileIn);
 
             int nrEmp = dataIn.readInt();
-            int maxId = dataIn.readInt();
 
             for(int i = 0; i < nrEmp; i++) {
                 Object obj = objIn.readObject();
@@ -36,9 +35,6 @@ public class Main implements Serializable {
                 }
                 empDataManager.readSerializedEmployee((Employee)obj);
             }
-
-            empDataManager.setNrEmployees(nrEmp);
-            empDataManager.setMaxId(maxId);
 
             fileIn.close();
             objIn.close();

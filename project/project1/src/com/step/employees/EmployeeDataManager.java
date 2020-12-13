@@ -21,7 +21,7 @@ public class EmployeeDataManager {
     }
 
     public void readSerializedEmployee(Employee employee) {
-        employees.add(new Employee(employee.nume, employee.prenume, employee.dataNasterii, employee.idnp, employee.salariu, this));
+        this.addEmployee(employee.nume, employee.prenume, employee.dataNasterii, employee.idnp, employee.salariu);
     }
 
     public void readEmployee(Employee employee) {
@@ -123,7 +123,7 @@ public class EmployeeDataManager {
             DataOutputStream dataOut = new DataOutputStream(fileOut);
 
             dataOut.writeInt(nrEmployees);
-            dataOut.writeInt(maxId);
+            //dataOut.writeInt(maxId);
 
             for(Employee employee : this.employees) {
                 objectOut.writeObject(employee);
